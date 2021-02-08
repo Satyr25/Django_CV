@@ -1,0 +1,38 @@
+{% extends 'core/base.html' %}
+
+{% block title %} Portafolio {% endblock %}
+
+{% block background %}{% load static %}{% static 'core/img/portfolio-bg.jpg' %}{% endblock %}
+
+{% block header %}
+    <h1>Aldo Amaya</h1>
+    <span class="subheading">Portafolio</span>
+{% endblock %}
+
+{% block content %}
+
+    <!-- Contenido Principal -->
+    <div class="container">
+        <!-- Proyecto -->
+        <div class="row">  	
+            {% for project in projects %}
+
+                <div class="col-lg-6 project-container">
+                    <a href=" {% url 'detail_portfolio' project.id %} " class="project-link" >
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <img src=" {{project.image.url}} " alt="" class="img-fluid">
+                            </div>
+                            <div class="col-sm-8">
+                                <p class="section-heading title"> {{project.title}} </p>   
+                                <p class="project-abstract"> {{project.abstract}} </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            {% endfor %}
+    </div>
+  
+
+{% endblock %}

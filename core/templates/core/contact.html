@@ -1,0 +1,25 @@
+{% extends 'core/base.html' %}
+
+{% block title %} Contacto {% endblock %}
+
+{% block background %}{% load static %}{% static 'core/img/contact-bg.jpg' %}{% endblock %}
+
+{% block header %}
+    <h1>Aldo Amaya</h1>
+    <span class="subheading">Contáctame</span>
+{% endblock %}
+
+{% block content %}
+
+    <!-- Contenido Principal -->
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <p><b>Teléfono: </b> 55 11 08 22 86</p>
+            <p><b>Móvil: </b> 55 12 81 11 60</p>
+            <p><b>Email: </b><a href="mailto:aldo.misael.amaya@gmail.com">aldo.misael.amaya@gmail.com</a></p>
+          </div>
+        </div>
+    </div>
+
+{% endblock %}
